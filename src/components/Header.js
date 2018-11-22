@@ -4,6 +4,7 @@ import logo from './../logo.svg';
 //Responsive
 import { Grid, Row, Col } from 'react-bootstrap';
 
+
 export default class Header extends React.Component{
 
 	render(){
