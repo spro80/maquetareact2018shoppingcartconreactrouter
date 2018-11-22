@@ -1,5 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'
+//import { Router } from 'react-router-dom'; --> No funciona por la version de la libreria
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
@@ -9,22 +12,14 @@ import registerServiceWorker from './registerServiceWorker';
 //import 'react-bootstrap/react-bootstrap.min.js';
 
 
-
-
 //import './styles.css'
-
-
-//import 'bootstrap/dist/css/bootstrap-theme.css';
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import 'bootstrap/dist/css/bootstrap-theme.min.css';
-//import 'jquery/dist/jquery.min.js'
-//import 'bootstrap/dist/js/bootstrap.min.js'
-
 import './heroic-features.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+<Router> 
+    <App /> 
+    </Router>, document.getElementById('root'));
 registerServiceWorker();
 
 
