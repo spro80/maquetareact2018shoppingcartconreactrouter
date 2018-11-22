@@ -1,10 +1,42 @@
 import React from 'react'
 import logo from './../logo.svg';
 
+import { Link } from 'react-router-dom'
+
+
 //Responsive
 //import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Grid, Row, Col } from 'react-bootstrap';
 
+/*
+								<div class="collapse navbar-collapse" id="navbarResponsive">
+									<ul class="navbar-nav ml-auto">
+										<li class="nav-item active">
+											<Link to="/">Home</Link>
+											<a class="nav-link" href="#">Inicio
+											<span class="sr-only">(current)</span>
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#">Productos</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#">Promociones</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#">Mis Pedidos</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#">Contacto</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#">Ver Carrito ( 0 ) </a>
+										</li>
+
+									</ul>
+								</div>
+
+*/ 
 
 export default class HorizontalMenu extends React.Component{
 
@@ -27,30 +59,27 @@ export default class HorizontalMenu extends React.Component{
 								<div class="collapse navbar-collapse" id="navbarResponsive">
 									<ul class="navbar-nav ml-auto">
 										<li class="nav-item active">
-											<a class="nav-link" href="#">Inicio
-											<span class="sr-only">(current)</span>
-											</a>
+											<Link to="/">Inicio</Link>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#">Productos</a>
+											<Link to="/productos">Productos</Link>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#">Promociones</a>
+											<Link to="/promociones">Promociones</Link>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#">Mis Pedidos</a>
+											<Link to="/mispedidos">Mis Pedidos</Link>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#">Contacto</a>
+											<Link to="/contacto">Contacto</Link>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#">Ver Carrito ( 0 ) </a>
+											<Link to="/vercarrito">Ver Carrito</Link>
 										</li>
-										/*<li class="nav-item">
-											<a class="nav-link" href="#">Administración</a>
-										</li>*/
+
 									</ul>
-								</div>
+								</div>								
+
 							</div>
 						</nav>
 					</div>
