@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
 
-//Responsive
-//import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Route } from 'react-router-dom'
 
 //Components
 import { Information, Header, HorizontalMenu, Contenido, Footer, InformationWelcome   } from './components'
@@ -17,8 +15,41 @@ import './App.css';
 import './styles.css'
 
 
+//import logo from './logo.svg';
+//Responsive
+//import { Grid, Row, Col } from 'react-flexbox-grid';
 //import 'bootstrap/dist/css/bootstrap.css';
 //import 'bootstrap/dist/css/bootstrap-theme.css';
+
+
+
+class App extends Component {
+	render() {
+		return (
+    
+			<div className="App">
+
+			<Route path="/" component={HorizontalMenu} />
+			<Route path="/" component={Header} />
+			
+			<Route exact path="/productos" component={Contenido} />
+			<Route exact path="/promociones" component={Contenido} />
+			<Route exact path="/mispedidos" component={Contenido} />
+			<Route exact path="/contacto" component={Contenido} />
+			<Route exact path="/vercarrito" component={Contenido} />
+			
+			<Route path="/" component={Footer} />
+
+			</div>
+      
+		);
+	}
+}
+
+export default App;
+
+
+
 
 
 /*
@@ -119,16 +150,7 @@ class Footer extends Component {
 }
 */
 
-
-
-
-class App extends Component {
-	render() {
-		return (
-    
-			<div className="App">
-		
-				<HorizontalMenu>
+/*				<HorizontalMenu>
 				</HorizontalMenu>
 				
 				<Header>
@@ -140,10 +162,8 @@ class App extends Component {
 				<Footer>
 				</Footer>
 
-			</div>
-      
-		);
-	}
-}
-
-export default App;
+							<Route path="/" component={HorizontalMenu} />
+			<Route path="/" component={Header} />
+			<Route path="/" component={Contenido} />
+			<Route path="/" component={Footer} />
+*/
