@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 
 //Components
-import { Information, Header, HorizontalMenu, Contenido, Footer, InformationWelcome   } from './components'
+import { HorizontalMenu, Info, Header, Login, Products, Promotions, Contact, MyOrders, ShoopingCartProducts, Footer, Information, InformationWelcome } from './components'
 
 
 import { Grid, Row, Col } from 'react-bootstrap';
@@ -30,13 +30,16 @@ class App extends Component {
 			<div className="App">
 
 			<Route path="/" component={HorizontalMenu} />
+			<Route path="/" component={Info} />
 			<Route path="/" component={Header} />
+			<Route exact path="/login" component={Login} />
+						
+			<Route exact path="/productos" component={Products} />
+			<Route exact path="/promociones" component={Promotions} />
+			<Route exact path="/contacto" component={Contact} />
+			<Route exact path="/mispedidos" component={MyOrders} />
+			<Route exact path="/vercarrito" component={ShoopingCartProducts} />
 			
-			<Route exact path="/productos" component={Contenido} />
-			<Route exact path="/promociones" component={Contenido} />
-			<Route exact path="/mispedidos" component={Contenido} />
-			<Route exact path="/contacto" component={Contenido} />
-			<Route exact path="/vercarrito" component={Contenido} />
 			
 			<Route path="/" component={Footer} />
 
