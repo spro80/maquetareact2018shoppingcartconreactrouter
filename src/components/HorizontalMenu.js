@@ -68,13 +68,10 @@ export default class HorizontalMenu extends React.Component{
 											<Link to="/promociones">Promociones</Link>
 										</li>
 										<li class="nav-item">
-											<Link to="/mispedidos">Mis Pedidos</Link>
-										</li>
-										<li class="nav-item">
 											<Link to="/contacto">Contacto</Link>
 										</li>
 										<li class="nav-item">
-											<Link to="/vercarrito">Ver Carrito</Link>
+											<Link to="/mispedidos">Mis Pedidos</Link>
 										</li>
 
 									</ul>
